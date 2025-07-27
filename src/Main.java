@@ -23,8 +23,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/hospital_management";
-        String user = "root";
-        String password = "Undergrad@3110";
+        String user = "your_mysql_username";
+        String password = "your_mysql_password";
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             System.out.println("Connected to the database!");
