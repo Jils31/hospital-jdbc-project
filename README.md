@@ -44,6 +44,16 @@ In MySQL Workbench or MySQL CLI, run:
 SOURCE schema.sql;
 ```
 
+### ⚙️ Configure Database Credentials
+
+Before running the application, update the `Main.java` file:
+
+```java
+DB_URL = "jdbc:mysql://localhost:3306/hospital_management";
+DB_USER = "your_mysql_username";
+DB_PASSWORD = "your_mysql_password";
+```
+
 ### 3 Compile the Java Code
 Ensure you're in the project root, then run:
 
