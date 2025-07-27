@@ -27,7 +27,7 @@ public class Main {
         String password = "Undergrad@3110";
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            System.out.println("✅ Connected to the database!");
+            System.out.println("Connected to the database!");
 
             Scanner sc = new Scanner(System.in);
             PatientDAO patientDAO = new PatientDAO(conn);
@@ -52,7 +52,7 @@ public class Main {
                 System.out.println("14. Exit");
                 System.out.print("Enter choice: ");
                 int choice = sc.nextInt();
-                sc.nextLine(); // flush newline
+                sc.nextLine();
 
                 switch (choice) {
                     case 1:
@@ -227,16 +227,16 @@ public class Main {
                         break;
 
                     case 14:
-                        System.out.println("👋 Exiting...");
+                        System.out.println("Exiting...");
                         return;
 
                     default:
-                        System.out.println("❗ Invalid option.");
+                        System.out.println("Invalid option.");
                 }
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ Connection failed: " + e.getMessage());
+            System.out.println("Connection failed: " + e.getMessage());
         }
     }
 }

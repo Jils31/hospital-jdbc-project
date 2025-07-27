@@ -27,9 +27,9 @@ public class AppointmentDAO {
             stmt.setString(5, appt.getNotes());
 
             stmt.executeUpdate();
-            System.out.println("✅ Appointment booked successfully!");
+            System.out.println("Appointment booked successfully!");
         } catch (SQLException e) {
-            System.out.println("❌ Error booking appointment: " + e.getMessage());
+            System.out.println("Error booking appointment: " + e.getMessage());
         }
     }
 
@@ -59,7 +59,7 @@ public class AppointmentDAO {
                         ", Status: " + status + ", Notes: " + notes);
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error retrieving appointments: " + e.getMessage());
+            System.out.println("Error retrieving appointments: " + e.getMessage());
         }
     }
 }

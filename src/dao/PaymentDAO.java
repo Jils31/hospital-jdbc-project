@@ -20,9 +20,9 @@ public class PaymentDAO {
             stmt.setString(4, p.getPaymentMethod());
             stmt.setString(5, p.getStatus());
             stmt.executeUpdate();
-            System.out.println("✅ Payment recorded successfully.");
+            System.out.println("Payment recorded successfully.");
         } catch (SQLException e) {
-            System.out.println("❌ Error recording payment: " + e.getMessage());
+            System.out.println("Error recording payment: " + e.getMessage());
         }
     }
 
@@ -45,7 +45,7 @@ public class PaymentDAO {
                         " | Date: " + rs.getString("payment_date"));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error fetching payments: " + e.getMessage());
+            System.out.println("Error fetching payments: " + e.getMessage());
         }
     }
 }

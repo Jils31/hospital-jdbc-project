@@ -22,11 +22,11 @@ public class PrescriptionDAO {
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next()) {
                 int id = rs.getInt(1);
-                System.out.println("✅ Prescription Created with ID: " + id);
+                System.out.println("Prescription Created with ID: " + id);
                 return id;
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error creating prescription: " + e.getMessage());
+            System.out.println("Error creating prescription: " + e.getMessage());
         }
         return -1;
     }
@@ -40,9 +40,9 @@ public class PrescriptionDAO {
             stmt.setInt(4, item.getDuration());
             stmt.setString(5, item.getInstructions());
             stmt.executeUpdate();
-            System.out.println("✅ Medication added to prescription.");
+            System.out.println("Medication added to prescription.");
         } catch (SQLException e) {
-            System.out.println("❌ Error adding item: " + e.getMessage());
+            System.out.println("Error adding item: " + e.getMessage());
         }
     }
 
@@ -68,7 +68,7 @@ public class PrescriptionDAO {
                         " | Instructions: " + rs.getString("instructions"));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error fetching prescriptions: " + e.getMessage());
+            System.out.println("Error fetching prescriptions: " + e.getMessage());
         }
     }
 }

@@ -30,9 +30,9 @@ public class PatientDAO {
             stmt.setString(8, patient.getBloodGroup());
 
             stmt.executeUpdate();
-            System.out.println("✅ Patient registered successfully!");
+            System.out.println("Patient registered successfully!");
         } catch (SQLException e) {
-            System.out.println("❌ Error registering patient: " + e.getMessage());
+            System.out.println("Error registering patient: " + e.getMessage());
         }
     }
 
@@ -55,7 +55,7 @@ public class PatientDAO {
                         ", Gender: " + gender + ", Contact: " + contact + ", Email: " + email);
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error retrieving patients: " + e.getMessage());
+            System.out.println("Error retrieving patients: " + e.getMessage());
         }
     }
 }

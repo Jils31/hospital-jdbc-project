@@ -28,7 +28,7 @@ public class StaffDAO {
                                    (specialization != null ? ", Specialization: " + specialization : ""));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error retrieving staff: " + e.getMessage());
+            System.out.println("Error retrieving staff: " + e.getMessage());
         }
     }
 }

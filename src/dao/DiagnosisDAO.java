@@ -21,9 +21,9 @@ public class DiagnosisDAO {
             pstmt.setString(2, d.getDiagnosisText());
             pstmt.setString(3, d.getDiagnosisDate());
             pstmt.executeUpdate();
-            System.out.println("✅ Diagnosis recorded.");
+            System.out.println("Diagnosis recorded.");
         } catch (SQLException e) {
-            System.out.println("❌ Error recording diagnosis: " + e.getMessage());
+            System.out.println("Error recording diagnosis: " + e.getMessage());
         }
     }
 
@@ -44,7 +44,7 @@ public class DiagnosisDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ Error retrieving diagnoses: " + e.getMessage());
+            System.out.println("Error retrieving diagnoses: " + e.getMessage());
         }
     }
 }

@@ -25,11 +25,11 @@ public class BillingDAO {
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next()) {
                 int id = rs.getInt(1);
-                System.out.println("✅ Bill created with ID: " + id);
+                System.out.println("Bill created with ID: " + id);
                 return id;
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error creating bill: " + e.getMessage());
+            System.out.println("Error creating bill: " + e.getMessage());
         }
         return -1;
     }
@@ -42,9 +42,9 @@ public class BillingDAO {
             stmt.setString(3, item.getDescription());
             stmt.setDouble(4, item.getAmount());
             stmt.executeUpdate();
-            System.out.println("✅ Bill item added.");
+            System.out.println("Bill item added.");
         } catch (SQLException e) {
-            System.out.println("❌ Error adding item: " + e.getMessage());
+            System.out.println("Error adding item: " + e.getMessage());
         }
     }
 
@@ -66,7 +66,7 @@ public class BillingDAO {
                         " | Date: " + rs.getString("billing_date"));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Error retrieving bills: " + e.getMessage());
+            System.out.println("Error retrieving bills: " + e.getMessage());
         }
     }
 }
